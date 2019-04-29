@@ -1199,13 +1199,13 @@
   .MySpotNotLoggedInScreen > .background > .elWind_Surfing512 {
     position: absolute;
     left: calc(50.0% + 0px - 58px);
-    top: 249px;
+    top: 294px;
     width: 117px;
     height: 100px;
   }
 @media (min-width: 568px) {
   .MySpotNotLoggedInScreen > .background > .elWind_Surfing512 {
-    left: calc(50.0% + -56px - 58px);
+    left: calc(50.0% + 0px - 58px);
     top: 93px;
     width: 117px;
     height: 100px;
@@ -1213,8 +1213,8 @@
 }
 @media (min-width: 768px) {
   .MySpotNotLoggedInScreen > .background > .elWind_Surfing512 {
-    left: calc(50.0% + -16px - 109px);
-    top: 248px;
+    left: calc(50.0% + 0px - 109px);
+    top: 326px;
     width: 218px;
     height: 216px;
   }
@@ -1222,7 +1222,7 @@
 @media (min-width: 1024px) {
   .MySpotNotLoggedInScreen > .background > .elWind_Surfing512 {
     left: calc(51.6% + 0px - 130px);
-    top: 248px;
+    top: 292px;
     width: 260px;
     height: 264px;
   }
@@ -1234,7 +1234,7 @@
     position: absolute;
     margin-top: 86px;
     width: 204px;
-    margin-left: 7px;
+    margin-left: 6.0%;
   }
   .MySpotNotLoggedInScreen > .layoutFlow > .flowRow > .elSunnyPeriod > * { 
   width: 204px;
@@ -1247,13 +1247,13 @@
 @media (min-width: 568px) {
   .MySpotNotLoggedInScreen > .layoutFlow > .flowRow > .elSunnyPeriod {
     position: absolute;
-    margin-top: 86px;
-    width: 64px;
-    margin-left: 12px;
+    margin-top: 77px;
+    width: 125px;
+    margin-left: 6.0%;
   }
   .MySpotNotLoggedInScreen > .layoutFlow > .flowRow > .elSunnyPeriod > * { 
-  width: 64px;
-  height: 55px;
+  width: 125px;
+  height: 125px;
   }
   
   .flowRow_MySpotNotLoggedInScreen_elSunnyPeriod_685051 { 
@@ -1265,7 +1265,7 @@
     position: absolute;
     margin-top: 144px;
     width: 185px;
-    margin-left: 12px;
+    margin-left: 6.0%;
   }
   .MySpotNotLoggedInScreen > .layoutFlow > .flowRow > .elSunnyPeriod > * { 
   width: 185px;
@@ -1280,12 +1280,12 @@
   .MySpotNotLoggedInScreen > .layoutFlow > .flowRow > .elSunnyPeriod {
     position: absolute;
     margin-top: 104px;
-    width: 198px;
-    margin-left: 22px;
+    width: 258px;
+    margin-left: calc(6.0% + 22px);
   }
   .MySpotNotLoggedInScreen > .layoutFlow > .flowRow > .elSunnyPeriod > * { 
-  width: 198px;
-  height: 200px;
+  width: 258px;
+  height: 246px;
   }
   
   .flowRow_MySpotNotLoggedInScreen_elSunnyPeriod_685051 { 
@@ -1323,9 +1323,9 @@
   .MySpotNotLoggedInScreen > .layoutFlow > .flowRow > .elWindDerection {
     overflow: hidden;
     position: absolute;
-    top: 98px;
+    top: 223px;
     width: 83px;
-    margin-left: calc(82.7% + 5px);
+    margin-left: 82.7%;
   }
   .MySpotNotLoggedInScreen > .layoutFlow > .flowRow > .elWindDerection > * { 
   width: 83px;
@@ -1336,9 +1336,9 @@
   .MySpotNotLoggedInScreen > .layoutFlow > .flowRow > .elWindDerection {
     overflow: hidden;
     position: absolute;
-    top: 111px;
+    top: 238px;
     width: 103px;
-    margin-left: calc(82.7% + -1px);
+    margin-left: 82.7%;
   }
   .MySpotNotLoggedInScreen > .layoutFlow > .flowRow > .elWindDerection > * { 
   width: 103px;
@@ -1364,7 +1364,7 @@
   .MySpotNotLoggedInScreen > .layoutFlow > .flowRow > .elWindDerectionText {
     overflow: hidden;
     position: absolute;
-    top: 82px;
+    top: 186px;
     width: 100%;
   }
   .MySpotNotLoggedInScreen > .layoutFlow > .flowRow > .elWindDerectionText > * { 
@@ -1378,7 +1378,7 @@
   .MySpotNotLoggedInScreen > .layoutFlow > .flowRow > .elWindDerectionText {
     overflow: hidden;
     position: absolute;
-    top: 100px;
+    top: 225px;
     width: 100%;
   }
   .MySpotNotLoggedInScreen > .layoutFlow > .flowRow > .elWindDerectionText > * { 
@@ -1392,13 +1392,13 @@
   .MySpotNotLoggedInScreen > .layoutFlow > .flowRow > .elWindDerectionText {
     overflow: hidden;
     position: absolute;
-    top: 110px;
+    top: 241px;
     width: 100%;
   }
   .MySpotNotLoggedInScreen > .layoutFlow > .flowRow > .elWindDerectionText > * { 
   margin-left: auto;
-  width: 300px;
-  margin-right: 17.3%;
+  width: 306px;
+  margin-right: 17.7%;
   }
   
 }
@@ -1420,7 +1420,7 @@
   .MySpotNotLoggedInScreen > .layoutFlow > .flowRow > .elWindSpeed {
     overflow: hidden;
     position: absolute;
-    top: 150px;
+    top: 158px;
     width: 52px;
     margin-left: 82.7%;
   }
@@ -1433,9 +1433,9 @@
   .MySpotNotLoggedInScreen > .layoutFlow > .flowRow > .elWindSpeed {
     overflow: hidden;
     position: absolute;
-    top: 161px;
+    top: 178px;
     width: 148px;
-    margin-left: calc(82.7% + 20px);
+    margin-left: 82.7%;
   }
   .MySpotNotLoggedInScreen > .layoutFlow > .flowRow > .elWindSpeed > * { 
   width: 148px;
@@ -1446,9 +1446,9 @@
   .MySpotNotLoggedInScreen > .layoutFlow > .flowRow > .elWindSpeed {
     overflow: hidden;
     position: absolute;
-    top: 174px;
+    top: 178px;
     width: 167px;
-    margin-left: calc(82.7% + 42px);
+    margin-left: 82.7%;
   }
   .MySpotNotLoggedInScreen > .layoutFlow > .flowRow > .elWindSpeed > * { 
   width: 167px;
@@ -1474,13 +1474,13 @@
   .MySpotNotLoggedInScreen > .layoutFlow > .flowRow > .elWindSpeedText {
     overflow: hidden;
     position: absolute;
-    top: 113px;
+    top: 158px;
     width: 100%;
   }
   .MySpotNotLoggedInScreen > .layoutFlow > .flowRow > .elWindSpeedText > * { 
   margin-left: auto;
-  width: 158px;
-  margin-right: 17.9%;
+  width: 169px;
+  margin-right: 17.3%;
   }
   
 }
@@ -1488,12 +1488,12 @@
   .MySpotNotLoggedInScreen > .layoutFlow > .flowRow > .elWindSpeedText {
     overflow: hidden;
     position: absolute;
-    top: 162px;
+    top: 180px;
     width: 100%;
   }
   .MySpotNotLoggedInScreen > .layoutFlow > .flowRow > .elWindSpeedText > * { 
   margin-left: auto;
-  width: 253px;
+  width: 348px;
   margin-right: 17.8%;
   }
   
@@ -1502,13 +1502,13 @@
   .MySpotNotLoggedInScreen > .layoutFlow > .flowRow > .elWindSpeedText {
     overflow: hidden;
     position: absolute;
-    top: 178px;
+    top: 180px;
     width: 100%;
   }
   .MySpotNotLoggedInScreen > .layoutFlow > .flowRow > .elWindSpeedText > * { 
   margin-left: auto;
-  width: 252px;
-  margin-right: 17.3%;
+  width: 340px;
+  margin-right: 17.7%;
   }
   
 }
@@ -1530,9 +1530,9 @@
   .MySpotNotLoggedInScreen > .layoutFlow > .flowRow > .elSpotText {
     overflow: hidden;
     position: absolute;
-    top: 254px;
+    top: 68px;
     width: 179px;
-    margin-left: calc(50.5% - 90px);
+    margin-left: calc(44.4% - 90px);
   }
   .MySpotNotLoggedInScreen > .layoutFlow > .flowRow > .elSpotText > * { 
   width: 179px;
@@ -1543,7 +1543,7 @@
   .MySpotNotLoggedInScreen > .layoutFlow > .flowRow > .elSpotText {
     overflow: hidden;
     position: absolute;
-    top: 910px;
+    top: 90px;
     width: 211px;
     margin-left: calc(50.4% - 105px);
   }
@@ -1556,9 +1556,9 @@
   .MySpotNotLoggedInScreen > .layoutFlow > .flowRow > .elSpotText {
     overflow: hidden;
     position: absolute;
-    top: 646px;
+    top: 90px;
     width: 213px;
-    margin-left: calc(51.8% - 106px);
+    margin-left: calc(51.6% - 106px);
   }
   .MySpotNotLoggedInScreen > .layoutFlow > .flowRow > .elSpotText > * { 
   width: 213px;
@@ -1584,7 +1584,7 @@
   .MySpotNotLoggedInScreen > .layoutFlow > .flowRow > .elTempraturText {
     overflow: hidden;
     position: absolute;
-    top: 212px;
+    top: 210px;
     width: 100%;
   }
   .MySpotNotLoggedInScreen > .layoutFlow > .flowRow > .elTempraturText > * { 
@@ -1598,7 +1598,7 @@
   .MySpotNotLoggedInScreen > .layoutFlow > .flowRow > .elTempraturText {
     overflow: hidden;
     position: absolute;
-    top: 842px;
+    top: 765px;
     width: 100%;
   }
   .MySpotNotLoggedInScreen > .layoutFlow > .flowRow > .elTempraturText > * { 
@@ -1612,13 +1612,13 @@
   .MySpotNotLoggedInScreen > .layoutFlow > .flowRow > .elTempraturText {
     overflow: hidden;
     position: absolute;
-    top: 568px;
+    top: 562px;
     width: 100%;
   }
   .MySpotNotLoggedInScreen > .layoutFlow > .flowRow > .elTempraturText > * { 
   margin-left: auto;
   width: 374px;
-  margin-right: 48.4%;
+  margin-right: 48.7%;
   }
   
 }
@@ -1640,9 +1640,9 @@
   .MySpotNotLoggedInScreen > .layoutFlow > .flowRow > .elTemprature {
     overflow: hidden;
     position: absolute;
-    top: 206px;
+    top: 208px;
     width: 78px;
-    margin-left: calc(50.0% + 236px);
+    margin-left: 50.0%;
   }
   .MySpotNotLoggedInScreen > .layoutFlow > .flowRow > .elTemprature > * { 
   width: 78px;
@@ -1653,9 +1653,9 @@
   .MySpotNotLoggedInScreen > .layoutFlow > .flowRow > .elTemprature {
     overflow: hidden;
     position: absolute;
-    top: 844px;
+    top: 763px;
     width: 125px;
-    margin-left: calc(50.0% + 425px);
+    margin-left: 50.0%;
   }
   .MySpotNotLoggedInScreen > .layoutFlow > .flowRow > .elTemprature > * { 
   width: 125px;
@@ -1666,9 +1666,9 @@
   .MySpotNotLoggedInScreen > .layoutFlow > .flowRow > .elTemprature {
     overflow: hidden;
     position: absolute;
-    top: 565px;
+    top: 560px;
     width: 121px;
-    margin-left: calc(51.6% + 465px);
+    margin-left: 51.6%;
   }
   .MySpotNotLoggedInScreen > .layoutFlow > .flowRow > .elTemprature > * { 
   width: 121px;
@@ -1694,7 +1694,7 @@
   .MySpotNotLoggedInScreen > .layoutFlow > .flowRow > .elFeelsLikeText {
     overflow: hidden;
     position: absolute;
-    top: 212px;
+    top: 242px;
     width: 100%;
   }
   .MySpotNotLoggedInScreen > .layoutFlow > .flowRow > .elFeelsLikeText > * { 
@@ -1708,7 +1708,7 @@
   .MySpotNotLoggedInScreen > .layoutFlow > .flowRow > .elFeelsLikeText {
     overflow: hidden;
     position: absolute;
-    top: 842px;
+    top: 822px;
     width: 100%;
   }
   .MySpotNotLoggedInScreen > .layoutFlow > .flowRow > .elFeelsLikeText > * { 
@@ -1722,13 +1722,13 @@
   .MySpotNotLoggedInScreen > .layoutFlow > .flowRow > .elFeelsLikeText {
     overflow: hidden;
     position: absolute;
-    top: 568px;
+    top: 619px;
     width: 100%;
   }
   .MySpotNotLoggedInScreen > .layoutFlow > .flowRow > .elFeelsLikeText > * { 
   margin-left: auto;
   width: 374px;
-  margin-right: 48.4%;
+  margin-right: 48.7%;
   }
   
 }
@@ -1750,9 +1750,9 @@
   .MySpotNotLoggedInScreen > .layoutFlow > .flowRow > .elFellsLikeTemp {
     overflow: hidden;
     position: absolute;
-    top: 206px;
+    top: 240px;
     width: 78px;
-    margin-left: calc(50.0% + 236px);
+    margin-left: 50.0%;
   }
   .MySpotNotLoggedInScreen > .layoutFlow > .flowRow > .elFellsLikeTemp > * { 
   width: 78px;
@@ -1763,9 +1763,9 @@
   .MySpotNotLoggedInScreen > .layoutFlow > .flowRow > .elFellsLikeTemp {
     overflow: hidden;
     position: absolute;
-    top: 844px;
+    top: 819px;
     width: 125px;
-    margin-left: calc(50.0% + 425px);
+    margin-left: 50.0%;
   }
   .MySpotNotLoggedInScreen > .layoutFlow > .flowRow > .elFellsLikeTemp > * { 
   width: 125px;
@@ -1776,9 +1776,9 @@
   .MySpotNotLoggedInScreen > .layoutFlow > .flowRow > .elFellsLikeTemp {
     overflow: hidden;
     position: absolute;
-    top: 565px;
+    top: 616px;
     width: 121px;
-    margin-left: calc(51.6% + 465px);
+    margin-left: 51.6%;
   }
   .MySpotNotLoggedInScreen > .layoutFlow > .flowRow > .elFellsLikeTemp > * { 
   width: 121px;
