@@ -1,0 +1,1882 @@
+.App { /* Base font style */
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", sans-serif;
+  font-size: 15.1px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: rgba(0, 0, 0, 0.8500);
+  background-color: #f6f6f6;
+}
+
+.App .baseFont * { /* Base font style override for UI framework components */
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", sans-serif;
+  font-size: 15.1px;
+}
+
+.App .appBg {
+  background-color: #f6f6f6;
+}
+
+.App .cardBg {
+  background-color: white;
+}
+
+.App .baseTextBg { /* Base text color as background */
+  background-color: rgba(0, 0, 0, 0.8500);
+}
+
+.App .secondaryTextColor {
+  color: rgba(0, 0, 0, 0.5000);
+}
+
+.App .secondaryTextBg {
+  background-color: rgba(0, 0, 0, 0.5000);
+}
+
+.App .primaryTextColor {
+  color: #bee9ee;
+}
+
+.App .primaryBg {
+  background-color: #bee9ee;
+}
+
+.App .highlightTextColor {
+  color: #0093d5;
+}
+
+.App .highlightBg {
+  background-color: #0093d5;
+}
+
+/* Styles to customize the UI framework plugin (MUI, https://muicss.com) */
+.mui-btn {
+    padding-left: 0;
+    padding-right: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+.mui-btn--primary {
+    background-color: #bee9ee;
+}
+.mui-btn--primary:active, .mui-btn--primary:focus, .mui-btn--primary:hover {
+    background-color: #c3ebf0;
+}
+.mui-btn--accent {
+    background-color: #0093d5;
+}
+.mui-btn--accent:active, .mui-btn--accent:focus, .mui-btn--accent:hover {
+    background-color: #069fda;
+}
+.mui-textfield {  /* Reset UI framework styling that affects layout */
+    padding-top: 0;
+    margin-bottom: 0;
+}
+.mui-checkbox, .mui-radio {  /* Reset UI framework styling that affects layout */
+    margin-top: 0;
+    margin-bottom: 0;
+}
+.mui-select {  /* Reset UI framework styling that affects layout */
+    padding-top: 0;
+    margin-bottom: 0;
+}
+.mui-btn+.mui-btn {  /* Reset UI framework styling that affects layout */
+    margin-left: 0;
+}
+.mui-btn--fab {  /* Reset UI framework styling that breaks compositing */
+    z-index: auto;
+}
+
+@keyframes fadeIn {
+    0%   { opacity: 0.0; }
+    100% { opacity: 1.0; }
+}
+@keyframes slideIn_right {
+    0%   { transform: translateX(100%); }
+    100% { transform: translateX(0); }
+}
+@keyframes slideIn_bottom {
+    0%   { transform: translateY(100%); }
+    100% { transform: translateY(0); }
+}
+
+/* App-wide text styles specified in React Studio */
+.App .actionFont {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", sans-serif;
+  font-size: 14.2px;
+  font-weight: 400;
+}
+.App .actionFont * {
+  font-size: 14.2px;
+}
+.App .headlineFont {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", sans-serif;
+  font-size: 19.4px;
+  font-weight: 400;
+}
+.App .headlineFont * {
+  font-size: 19.4px;
+}
+.App .navBar {
+  background-color: #bee9ee;
+  color: black;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 63px;
+  min-height: 63px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", sans-serif;
+  font-size: 18px;
+}
+
+.App .navBar a {
+  color: black;
+}
+
+.App .navBar .title {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  padding: 4px;
+  margin-top: 13px;
+}
+
+.App .navBar .backBtn {
+  position: absolute;
+  padding: 4px;
+  margin-left: 14px;
+  margin-top: 13px;
+  cursor: pointer;
+}
+
+@media (min-width: 320px) {
+  .mui-container {
+    max-width: 320px;
+  }
+}
+@media (min-width: 568px) {
+  .mui-container {
+    max-width: 568px;
+  }
+}
+@media (min-width: 768px) {
+  .mui-container {
+    max-width: 768px;
+  }
+}
+@media (min-width: 1024px) {
+  .mui-container {
+    max-width: 1024px;
+  }
+}
+
+.AppScreen {
+  padding-left: 0;
+  padding-right: 0;
+  position: absolute;
+  width: 100%;
+}
+
+.App .background {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.App .layoutFlow {
+  position: relative;
+  width: 100%;
+  pointer-events: none;
+}
+.App .layoutFlow:before {  /* Prevent margin collapse */
+  content: "";
+  display: table;
+  clear: both;
+}
+.App .layoutFlow .flowRow {
+  position: relative;
+  width: 100%;
+}
+
+.App .screenFgContainer {
+  /* Items in the foreground group within a screen are placed with fixed positioning */
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+.App .foreground {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.App ul {
+  margin: 0;
+  padding: 0;
+}
+.App li {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  position: relative;
+}
+.App .hasNestedComps {
+  position: relative;
+}
+.App .hasNestedComps:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.App .hasNestedComps .background {
+  position: absolute;
+}
+.App .hasNestedComps .layoutFlow {
+  position: relative;
+}
+.App .bottomAlignedContent {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+.App .blockInputOverlay {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: auto;
+  z-index: 99999999;
+}
+
+/* This component has a fixed-size layout */
+  .Comp3 {
+    min-height: 53px;
+    overflow: hidden;
+    width: 100%; /* This component was designed using a width of 53px */
+    height: 100%;
+  }
+  .Comp3 > .background > .containerMinHeight {
+    min-height: 53px;
+  }
+
+
+  .Comp3 > .foreground > .state0_elUserHeartFull {
+    position: absolute;
+    left: 1px;
+    top: 0px;
+    width: 52px;
+    height: 52px;
+  }
+
+/* This component has a fixed-size layout */
+  .Comp3 {
+    min-height: 53px;
+    overflow: hidden;
+    width: 100%; /* This component was designed using a width of 53px */
+    height: 100%;
+  }
+  .Comp3 > .background > .containerMinHeight {
+    min-height: 53px;
+  }
+
+
+  .Comp3 > .foreground > .state1_elUser {
+    position: absolute;
+    left: 0px;
+    top: 1px;
+    width: 54px;
+    height: 54px;
+  }
+
+
+/* Narrowest size for this element's responsive layout */
+  .MySpotLoggedInScreen > .background > .elImage {
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    top: 63px;
+    width: 100.0%;
+    height: calc(100% + 0.0% + -63.4px);
+  }
+@media (min-width: 568px) {
+  .MySpotLoggedInScreen > .background > .elImage {
+    left: 0px;
+    right: 0px;
+    top: 63px;
+    width: 100.0%;
+    height: calc(100% + 0.0% + -63.4px);
+  }
+}
+@media (min-width: 768px) {
+  .MySpotLoggedInScreen > .background > .elImage {
+    left: 0px;
+    right: 0px;
+    top: 62px;
+    width: 100.0%;
+    height: calc(100% + 0.0% + -62.5px);
+  }
+}
+@media (min-width: 1024px) {
+  .MySpotLoggedInScreen > .background > .elImage {
+    left: 0px;
+    right: 0px;
+    top: 62px;
+    width: 100.0%;
+    height: calc(100% + 0.0% + -63.0px);
+  }
+}
+
+
+/* Narrowest size for this element's responsive layout */
+  .MySpotLoggedInScreen > .background > .elWind_Surfing512 {
+    position: absolute;
+    left: calc(50.0% + 0px - 58px);
+    top: 249px;
+    width: 117px;
+    height: 100px;
+  }
+@media (min-width: 568px) {
+  .MySpotLoggedInScreen > .background > .elWind_Surfing512 {
+    left: calc(50.0% + -56px - 58px);
+    top: 93px;
+    width: 117px;
+    height: 100px;
+  }
+}
+@media (min-width: 768px) {
+  .MySpotLoggedInScreen > .background > .elWind_Surfing512 {
+    left: calc(50.0% + -16px - 109px);
+    top: 248px;
+    width: 218px;
+    height: 216px;
+  }
+}
+@media (min-width: 1024px) {
+  .MySpotLoggedInScreen > .background > .elWind_Surfing512 {
+    left: calc(51.6% + 0px - 130px);
+    top: 248px;
+    width: 260px;
+    height: 264px;
+  }
+}
+
+
+/* Narrowest size for this element's responsive layout */
+  .MySpotLoggedInScreen > .layoutFlow > .flowRow > .elSunnyPeriod {
+    position: absolute;
+    margin-top: 86px;
+    width: 204px;
+    margin-left: 7px;
+  }
+  .MySpotLoggedInScreen > .layoutFlow > .flowRow > .elSunnyPeriod > * { 
+  width: 204px;
+  height: 204px;
+  }
+  
+  .flowRow_MySpotLoggedInScreen_elSunnyPeriod_775404 { 
+  }
+  
+@media (min-width: 568px) {
+  .MySpotLoggedInScreen > .layoutFlow > .flowRow > .elSunnyPeriod {
+    position: absolute;
+    margin-top: 86px;
+    width: 64px;
+    margin-left: 12px;
+  }
+  .MySpotLoggedInScreen > .layoutFlow > .flowRow > .elSunnyPeriod > * { 
+  width: 64px;
+  height: 55px;
+  }
+  
+  .flowRow_MySpotLoggedInScreen_elSunnyPeriod_775404 { 
+  }
+  
+}
+@media (min-width: 768px) {
+  .MySpotLoggedInScreen > .layoutFlow > .flowRow > .elSunnyPeriod {
+    position: absolute;
+    margin-top: 144px;
+    width: 185px;
+    margin-left: 12px;
+  }
+  .MySpotLoggedInScreen > .layoutFlow > .flowRow > .elSunnyPeriod > * { 
+  width: 185px;
+  height: 182px;
+  }
+  
+  .flowRow_MySpotLoggedInScreen_elSunnyPeriod_775404 { 
+  }
+  
+}
+@media (min-width: 1024px) {
+  .MySpotLoggedInScreen > .layoutFlow > .flowRow > .elSunnyPeriod {
+    position: absolute;
+    margin-top: 104px;
+    width: 198px;
+    margin-left: 22px;
+  }
+  .MySpotLoggedInScreen > .layoutFlow > .flowRow > .elSunnyPeriod > * { 
+  width: 198px;
+  height: 200px;
+  }
+  
+  .flowRow_MySpotLoggedInScreen_elSunnyPeriod_775404 { 
+  }
+  
+}
+
+
+/* Narrowest size for this element's responsive layout */
+  .MySpotLoggedInScreen > .layoutFlow > .flowRow > .elWindDerection {
+    overflow: hidden;
+    position: absolute;
+    top: 186px;
+    width: 49px;
+    margin-left: 82.7%;
+  }
+  .MySpotLoggedInScreen > .layoutFlow > .flowRow > .elWindDerection > * { 
+  width: 49px;
+  }
+  
+@media (min-width: 568px) {
+  .MySpotLoggedInScreen > .layoutFlow > .flowRow > .elWindDerection {
+    overflow: hidden;
+    position: absolute;
+    top: 186px;
+    width: 49px;
+    margin-left: 82.7%;
+  }
+  .MySpotLoggedInScreen > .layoutFlow > .flowRow > .elWindDerection > * { 
+  width: 49px;
+  }
+  
+}
+@media (min-width: 768px) {
+  .MySpotLoggedInScreen > .layoutFlow > .flowRow > .elWindDerection {
+    overflow: hidden;
+    position: absolute;
+    top: 98px;
+    width: 83px;
+    margin-left: calc(82.7% + 5px);
+  }
+  .MySpotLoggedInScreen > .layoutFlow > .flowRow > .elWindDerection > * { 
+  width: 83px;
+  }
+  
+}
+@media (min-width: 1024px) {
+  .MySpotLoggedInScreen > .layoutFlow > .flowRow > .elWindDerection {
+    overflow: hidden;
+    position: absolute;
+    top: 111px;
+    width: 103px;
+    margin-left: calc(82.7% + -1px);
+  }
+  .MySpotLoggedInScreen > .layoutFlow > .flowRow > .elWindDerection > * { 
+  width: 103px;
+  }
+  
+}
+
+
+/* Narrowest size for this element's responsive layout */
+  .MySpotLoggedInScreen > .layoutFlow > .flowRow > .elWindDerectionText {
+    overflow: hidden;
+    position: absolute;
+    top: 190px;
+    width: 100%;
+  }
+  .MySpotLoggedInScreen > .layoutFlow > .flowRow > .elWindDerectionText > * { 
+  margin-left: auto;
+  width: 153px;
+  margin-right: 18.4%;
+  }
+  
+@media (min-width: 568px) {
+  .MySpotLoggedInScreen > .layoutFlow > .flowRow > .elWindDerectionText {
+    overflow: hidden;
+    position: absolute;
+    top: 82px;
+    width: 100%;
+  }
+  .MySpotLoggedInScreen > .layoutFlow > .flowRow > .elWindDerectionText > * { 
+  margin-left: auto;
+  width: 153px;
+  margin-right: 17.9%;
+  }
+  
+}
+@media (min-width: 768px) {
+  .MySpotLoggedInScreen > .layoutFlow > .flowRow > .elWindDerectionText {
+    overflow: hidden;
+    position: absolute;
+    top: 100px;
+    width: 100%;
+  }
+  .MySpotLoggedInScreen > .layoutFlow > .flowRow > .elWindDerectionText > * { 
+  margin-left: auto;
+  width: 296px;
+  margin-right: 17.8%;
+  }
+  
+}
+@media (min-width: 1024px) {
+  .MySpotLoggedInScreen > .layoutFlow > .flowRow > .elWindDerectionText {
+    overflow: hidden;
+    position: absolute;
+    top: 110px;
+    width: 100%;
+  }
+  .MySpotLoggedInScreen > .layoutFlow > .flowRow > .elWindDerectionText > * { 
+  margin-left: auto;
+  width: 300px;
+  margin-right: 17.3%;
+  }
+  
+}
+
+
+/* Narrowest size for this element's responsive layout */
+  .MySpotLoggedInScreen > .layoutFlow > .flowRow > .elWindSpeed {
+    overflow: hidden;
+    position: absolute;
+    top: 147px;
+    width: 52px;
+    margin-left: 82.7%;
+  }
+  .MySpotLoggedInScreen > .layoutFlow > .flowRow > .elWindSpeed > * { 
+  width: 52px;
+  }
+  
+@media (min-width: 568px) {
+  .MySpotLoggedInScreen > .layoutFlow > .flowRow > .elWindSpeed {
+    overflow: hidden;
+    position: absolute;
+    top: 147px;
+    width: 52px;
+    margin-left: 82.7%;
+  }
+  .MySpotLoggedInScreen > .layoutFlow > .flowRow > .elWindSpeed > * { 
+  width: 52px;
+  }
+  
+}
+@media (min-width: 768px) {
+  .MySpotLoggedInScreen > .layoutFlow > .flowRow > .elWindSpeed {
+    overflow: hidden;
+    position: absolute;
+    top: 161px;
+    width: 148px;
+    margin-left: calc(82.7% + 20px);
+  }
+  .MySpotLoggedInScreen > .layoutFlow > .flowRow > .elWindSpeed > * { 
+  width: 148px;
+  }
+  
+}
+@media (min-width: 1024px) {
+  .MySpotLoggedInScreen > .layoutFlow > .flowRow > .elWindSpeed {
+    overflow: hidden;
+    position: absolute;
+    top: 174px;
+    width: 167px;
+    margin-left: calc(82.7% + 42px);
+  }
+  .MySpotLoggedInScreen > .layoutFlow > .flowRow > .elWindSpeed > * { 
+  width: 167px;
+  }
+  
+}
+
+
+/* Narrowest size for this element's responsive layout */
+  .MySpotLoggedInScreen > .layoutFlow > .flowRow > .elWindSpeedText {
+    overflow: hidden;
+    position: absolute;
+    top: 152px;
+    width: 100%;
+  }
+  .MySpotLoggedInScreen > .layoutFlow > .flowRow > .elWindSpeedText > * { 
+  margin-left: auto;
+  width: 158px;
+  margin-right: 18.4%;
+  }
+  
+@media (min-width: 568px) {
+  .MySpotLoggedInScreen > .layoutFlow > .flowRow > .elWindSpeedText {
+    overflow: hidden;
+    position: absolute;
+    top: 113px;
+    width: 100%;
+  }
+  .MySpotLoggedInScreen > .layoutFlow > .flowRow > .elWindSpeedText > * { 
+  margin-left: auto;
+  width: 158px;
+  margin-right: 17.9%;
+  }
+  
+}
+@media (min-width: 768px) {
+  .MySpotLoggedInScreen > .layoutFlow > .flowRow > .elWindSpeedText {
+    overflow: hidden;
+    position: absolute;
+    top: 162px;
+    width: 100%;
+  }
+  .MySpotLoggedInScreen > .layoutFlow > .flowRow > .elWindSpeedText > * { 
+  margin-left: auto;
+  width: 253px;
+  margin-right: 17.8%;
+  }
+  
+}
+@media (min-width: 1024px) {
+  .MySpotLoggedInScreen > .layoutFlow > .flowRow > .elWindSpeedText {
+    overflow: hidden;
+    position: absolute;
+    top: 178px;
+    width: 100%;
+  }
+  .MySpotLoggedInScreen > .layoutFlow > .flowRow > .elWindSpeedText > * { 
+  margin-left: auto;
+  width: 252px;
+  margin-right: 17.3%;
+  }
+  
+}
+
+
+/* Narrowest size for this element's responsive layout */
+  .MySpotLoggedInScreen > .layoutFlow > .flowRow > .elSpotText {
+    overflow: hidden;
+    position: absolute;
+    top: 80px;
+    width: 179px;
+    margin-left: calc(50.0% - 90px);
+  }
+  .MySpotLoggedInScreen > .layoutFlow > .flowRow > .elSpotText > * { 
+  width: 179px;
+  }
+  
+@media (min-width: 568px) {
+  .MySpotLoggedInScreen > .layoutFlow > .flowRow > .elSpotText {
+    overflow: hidden;
+    position: absolute;
+    top: 254px;
+    width: 179px;
+    margin-left: calc(50.5% - 90px);
+  }
+  .MySpotLoggedInScreen > .layoutFlow > .flowRow > .elSpotText > * { 
+  width: 179px;
+  }
+  
+}
+@media (min-width: 768px) {
+  .MySpotLoggedInScreen > .layoutFlow > .flowRow > .elSpotText {
+    overflow: hidden;
+    position: absolute;
+    top: 910px;
+    width: 211px;
+    margin-left: calc(50.4% - 105px);
+  }
+  .MySpotLoggedInScreen > .layoutFlow > .flowRow > .elSpotText > * { 
+  width: 211px;
+  }
+  
+}
+@media (min-width: 1024px) {
+  .MySpotLoggedInScreen > .layoutFlow > .flowRow > .elSpotText {
+    overflow: hidden;
+    position: absolute;
+    top: 646px;
+    width: 213px;
+    margin-left: calc(51.8% - 106px);
+  }
+  .MySpotLoggedInScreen > .layoutFlow > .flowRow > .elSpotText > * { 
+  width: 213px;
+  }
+  
+}
+
+
+/* Narrowest size for this element's responsive layout */
+  .MySpotLoggedInScreen > .layoutFlow > .flowRow > .elTempraturText {
+    overflow: hidden;
+    position: absolute;
+    top: 453px;
+    width: 100%;
+  }
+  .MySpotLoggedInScreen > .layoutFlow > .flowRow > .elTempraturText > * { 
+  margin-left: auto;
+  width: 163px;
+  margin-right: 51.1%;
+  }
+  
+@media (min-width: 568px) {
+  .MySpotLoggedInScreen > .layoutFlow > .flowRow > .elTempraturText {
+    overflow: hidden;
+    position: absolute;
+    top: 212px;
+    width: 100%;
+  }
+  .MySpotLoggedInScreen > .layoutFlow > .flowRow > .elTempraturText > * { 
+  margin-left: auto;
+  width: 163px;
+  margin-right: 50.6%;
+  }
+  
+}
+@media (min-width: 768px) {
+  .MySpotLoggedInScreen > .layoutFlow > .flowRow > .elTempraturText {
+    overflow: hidden;
+    position: absolute;
+    top: 842px;
+    width: 100%;
+  }
+  .MySpotLoggedInScreen > .layoutFlow > .flowRow > .elTempraturText > * { 
+  margin-left: auto;
+  width: 380px;
+  margin-right: 50.4%;
+  }
+  
+}
+@media (min-width: 1024px) {
+  .MySpotLoggedInScreen > .layoutFlow > .flowRow > .elTempraturText {
+    overflow: hidden;
+    position: absolute;
+    top: 568px;
+    width: 100%;
+  }
+  .MySpotLoggedInScreen > .layoutFlow > .flowRow > .elTempraturText > * { 
+  margin-left: auto;
+  width: 374px;
+  margin-right: 48.4%;
+  }
+  
+}
+
+
+/* Narrowest size for this element's responsive layout */
+  .MySpotLoggedInScreen > .layoutFlow > .flowRow > .elTemprature {
+    overflow: hidden;
+    position: absolute;
+    top: 453px;
+    width: 78px;
+    margin-left: 50.0%;
+  }
+  .MySpotLoggedInScreen > .layoutFlow > .flowRow > .elTemprature > * { 
+  width: 78px;
+  }
+  
+@media (min-width: 568px) {
+  .MySpotLoggedInScreen > .layoutFlow > .flowRow > .elTemprature {
+    overflow: hidden;
+    position: absolute;
+    top: 206px;
+    width: 78px;
+    margin-left: calc(50.0% + 236px);
+  }
+  .MySpotLoggedInScreen > .layoutFlow > .flowRow > .elTemprature > * { 
+  width: 78px;
+  }
+  
+}
+@media (min-width: 768px) {
+  .MySpotLoggedInScreen > .layoutFlow > .flowRow > .elTemprature {
+    overflow: hidden;
+    position: absolute;
+    top: 844px;
+    width: 125px;
+    margin-left: calc(50.0% + 425px);
+  }
+  .MySpotLoggedInScreen > .layoutFlow > .flowRow > .elTemprature > * { 
+  width: 125px;
+  }
+  
+}
+@media (min-width: 1024px) {
+  .MySpotLoggedInScreen > .layoutFlow > .flowRow > .elTemprature {
+    overflow: hidden;
+    position: absolute;
+    top: 565px;
+    width: 121px;
+    margin-left: calc(51.6% + 465px);
+  }
+  .MySpotLoggedInScreen > .layoutFlow > .flowRow > .elTemprature > * { 
+  width: 121px;
+  }
+  
+}
+
+
+/* Narrowest size for this element's responsive layout */
+  .MySpotLoggedInScreen > .layoutFlow > .flowRow > .elFeelsLikeText {
+    overflow: hidden;
+    position: absolute;
+    top: 487px;
+    width: 100%;
+  }
+  .MySpotLoggedInScreen > .layoutFlow > .flowRow > .elFeelsLikeText > * { 
+  margin-left: auto;
+  width: 139px;
+  margin-right: 51.1%;
+  }
+  
+@media (min-width: 568px) {
+  .MySpotLoggedInScreen > .layoutFlow > .flowRow > .elFeelsLikeText {
+    overflow: hidden;
+    position: absolute;
+    top: 212px;
+    width: 100%;
+  }
+  .MySpotLoggedInScreen > .layoutFlow > .flowRow > .elFeelsLikeText > * { 
+  margin-left: auto;
+  width: 139px;
+  margin-right: 50.6%;
+  }
+  
+}
+@media (min-width: 768px) {
+  .MySpotLoggedInScreen > .layoutFlow > .flowRow > .elFeelsLikeText {
+    overflow: hidden;
+    position: absolute;
+    top: 842px;
+    width: 100%;
+  }
+  .MySpotLoggedInScreen > .layoutFlow > .flowRow > .elFeelsLikeText > * { 
+  margin-left: auto;
+  width: 380px;
+  margin-right: 50.4%;
+  }
+  
+}
+@media (min-width: 1024px) {
+  .MySpotLoggedInScreen > .layoutFlow > .flowRow > .elFeelsLikeText {
+    overflow: hidden;
+    position: absolute;
+    top: 568px;
+    width: 100%;
+  }
+  .MySpotLoggedInScreen > .layoutFlow > .flowRow > .elFeelsLikeText > * { 
+  margin-left: auto;
+  width: 374px;
+  margin-right: 48.4%;
+  }
+  
+}
+
+
+/* Narrowest size for this element's responsive layout */
+  .MySpotLoggedInScreen > .layoutFlow > .flowRow > .elFellsLikeTemp {
+    overflow: hidden;
+    position: absolute;
+    top: 484px;
+    width: 78px;
+    margin-left: 50.0%;
+  }
+  .MySpotLoggedInScreen > .layoutFlow > .flowRow > .elFellsLikeTemp > * { 
+  width: 78px;
+  }
+  
+@media (min-width: 568px) {
+  .MySpotLoggedInScreen > .layoutFlow > .flowRow > .elFellsLikeTemp {
+    overflow: hidden;
+    position: absolute;
+    top: 206px;
+    width: 78px;
+    margin-left: calc(50.0% + 236px);
+  }
+  .MySpotLoggedInScreen > .layoutFlow > .flowRow > .elFellsLikeTemp > * { 
+  width: 78px;
+  }
+  
+}
+@media (min-width: 768px) {
+  .MySpotLoggedInScreen > .layoutFlow > .flowRow > .elFellsLikeTemp {
+    overflow: hidden;
+    position: absolute;
+    top: 844px;
+    width: 125px;
+    margin-left: calc(50.0% + 425px);
+  }
+  .MySpotLoggedInScreen > .layoutFlow > .flowRow > .elFellsLikeTemp > * { 
+  width: 125px;
+  }
+  
+}
+@media (min-width: 1024px) {
+  .MySpotLoggedInScreen > .layoutFlow > .flowRow > .elFellsLikeTemp {
+    overflow: hidden;
+    position: absolute;
+    top: 565px;
+    width: 121px;
+    margin-left: calc(51.6% + 465px);
+  }
+  .MySpotLoggedInScreen > .layoutFlow > .flowRow > .elFellsLikeTemp > * { 
+  width: 121px;
+  }
+  
+}
+
+
+/* Narrowest size for this element's responsive layout */
+  .MySpotLoggedInScreen > .screenFgContainer > .foreground > .elWave {
+    position: absolute;
+    left: calc(6.0% + 0px);
+    top: 0px;
+    width: 52px;
+    height: 52px;
+  }
+@media (min-width: 568px) {
+  .MySpotLoggedInScreen > .screenFgContainer > .foreground > .elWave {
+    left: calc(6.0% + 0px);
+    top: 0px;
+    width: 52px;
+    height: 52px;
+  }
+}
+@media (min-width: 768px) {
+  .MySpotLoggedInScreen > .screenFgContainer > .foreground > .elWave {
+    left: calc(6.0% + 0px);
+    top: 0px;
+    width: 52px;
+    height: 52px;
+  }
+}
+@media (min-width: 1024px) {
+  .MySpotLoggedInScreen > .screenFgContainer > .foreground > .elWave {
+    left: calc(6.0% + 0px);
+    top: 0px;
+    width: 52px;
+    height: 52px;
+  }
+}
+
+.MySpotLoggedInScreen .elComp3 {
+  overflow: hidden;
+}
+
+.MySpotLoggedInScreen .elComp3.hasNestedComps > div {
+  overflow: hidden;
+  position: relative;
+}
+
+
+
+/* Narrowest size for this element's responsive layout */
+  .MySpotLoggedInScreen > .screenFgContainer > .foreground > .elComp3 {
+    position: absolute;
+    left: calc(82.7% + 0px - 26px);
+    top: 7px;
+    width: 52px;
+    height: 52px;
+  }
+  .MySpotLoggedInScreen > .screenFgContainer > .foreground > .elComp3 > .background > .containerMinHeight {
+    min-height: 53px;
+  }
+
+@media (min-width: 568px) {
+  .MySpotLoggedInScreen > .screenFgContainer > .foreground > .elComp3 {
+    left: calc(82.7% + 6px - 26px);
+    top: 7px;
+    width: 52px;
+    height: 52px;
+  }
+  .MySpotLoggedInScreen > .screenFgContainer > .foreground > .elComp3 > .background > .containerMinHeight {
+    min-height: 53px;
+  }
+
+}
+@media (min-width: 768px) {
+  .MySpotLoggedInScreen > .screenFgContainer > .foreground > .elComp3 {
+    left: calc(82.7% + 7px - 26px);
+    top: 7px;
+    width: 52px;
+    height: 52px;
+  }
+  .MySpotLoggedInScreen > .screenFgContainer > .foreground > .elComp3 > .background > .containerMinHeight {
+    min-height: 52px;
+  }
+
+}
+@media (min-width: 1024px) {
+  .MySpotLoggedInScreen > .screenFgContainer > .foreground > .elComp3 {
+    left: calc(82.7% + 5px - 26px);
+    top: 7px;
+    width: 52px;
+    height: 52px;
+  }
+  .MySpotLoggedInScreen > .screenFgContainer > .foreground > .elComp3 > .background > .containerMinHeight {
+    min-height: 52px;
+  }
+
+}
+
+
+/* Narrowest size for this element's responsive layout */
+  .LoginScreen > .background > .elBackground {
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    width: 100.0%;
+    height: 100%;
+  }
+@media (min-width: 568px) {
+  .LoginScreen > .background > .elBackground {
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    width: 100.0%;
+    height: 100%;
+  }
+}
+@media (min-width: 768px) {
+  .LoginScreen > .background > .elBackground {
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    width: 100.0%;
+    height: 100%;
+  }
+}
+@media (min-width: 1024px) {
+  .LoginScreen > .background > .elBackground {
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    width: 100.0%;
+    height: 100%;
+  }
+}
+
+
+/* Narrowest size for this element's responsive layout */
+  .LoginScreen > .layoutFlow > .elFirebaseLogin {
+    position: relative;
+    margin-top: 98px;
+    width: 163px;
+    margin-left: calc(50.0% - 82px);
+  }
+  .LoginScreen > .layoutFlow > .elFirebaseLogin > * { 
+  width: 163px;
+  height: 163px;
+  }
+  
+@media (min-width: 568px) {
+  .LoginScreen > .layoutFlow > .elFirebaseLogin {
+    position: relative;
+    margin-top: 98px;
+    width: 163px;
+    margin-left: calc(50.0% - 82px);
+  }
+  .LoginScreen > .layoutFlow > .elFirebaseLogin > * { 
+  width: 163px;
+  height: 163px;
+  }
+  
+}
+@media (min-width: 768px) {
+  .LoginScreen > .layoutFlow > .elFirebaseLogin {
+    position: relative;
+    margin-top: 97px;
+    width: 162px;
+    margin-left: calc(50.0% - 81px);
+  }
+  .LoginScreen > .layoutFlow > .elFirebaseLogin > * { 
+  width: 162px;
+  height: 162px;
+  }
+  
+}
+@media (min-width: 1024px) {
+  .LoginScreen > .layoutFlow > .elFirebaseLogin {
+    position: relative;
+    margin-top: 265px;
+    width: 297px;
+    margin-left: calc(51.6% - 149px);
+  }
+  .LoginScreen > .layoutFlow > .elFirebaseLogin > * { 
+  width: 297px;
+  height: 297px;
+  }
+  
+}
+
+/* This component has a fixed-size layout */
+  .Comp2 {
+    min-height: 53px;
+    overflow: hidden;
+    width: 100%; /* This component was designed using a width of 53px */
+    height: 100%;
+  }
+  .Comp2 > .background > .containerMinHeight {
+    min-height: 53px;
+  }
+
+
+  .Comp2 > .foreground > .state0_elUser {
+    position: absolute;
+    left: 0px;
+    top: 1px;
+    width: 54px;
+    height: 54px;
+  }
+
+/* This component has a fixed-size layout */
+  .Comp2 {
+    min-height: 53px;
+    overflow: hidden;
+    width: 100%; /* This component was designed using a width of 53px */
+    height: 100%;
+  }
+  .Comp2 > .background > .containerMinHeight {
+    min-height: 53px;
+  }
+
+
+  .Comp2 > .foreground > .state1_elUserHeartFull {
+    position: absolute;
+    left: 1px;
+    top: 0px;
+    width: 52px;
+    height: 52px;
+  }
+
+
+/* Narrowest size for this element's responsive layout */
+  .MySpotNotLoggedInScreen > .background > .elImage {
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    top: 63px;
+    width: 100.0%;
+    height: calc(100% + 0.0% + -63.4px);
+  }
+@media (min-width: 568px) {
+  .MySpotNotLoggedInScreen > .background > .elImage {
+    left: 0px;
+    right: 0px;
+    top: 63px;
+    width: 100.0%;
+    height: calc(100% + 0.0% + -63.4px);
+  }
+}
+@media (min-width: 768px) {
+  .MySpotNotLoggedInScreen > .background > .elImage {
+    left: 0px;
+    right: 0px;
+    top: 62px;
+    width: 100.0%;
+    height: calc(100% + 0.0% + -62.5px);
+  }
+}
+@media (min-width: 1024px) {
+  .MySpotNotLoggedInScreen > .background > .elImage {
+    left: 0px;
+    right: 0px;
+    top: 62px;
+    width: 100.0%;
+    height: calc(100% + 0.0% + -63.0px);
+  }
+}
+
+
+/* Narrowest size for this element's responsive layout */
+  .MySpotNotLoggedInScreen > .background > .elWind_Surfing512 {
+    position: absolute;
+    left: calc(50.0% + 0px - 58px);
+    top: 249px;
+    width: 117px;
+    height: 100px;
+  }
+@media (min-width: 568px) {
+  .MySpotNotLoggedInScreen > .background > .elWind_Surfing512 {
+    left: calc(50.0% + -56px - 58px);
+    top: 93px;
+    width: 117px;
+    height: 100px;
+  }
+}
+@media (min-width: 768px) {
+  .MySpotNotLoggedInScreen > .background > .elWind_Surfing512 {
+    left: calc(50.0% + -16px - 109px);
+    top: 248px;
+    width: 218px;
+    height: 216px;
+  }
+}
+@media (min-width: 1024px) {
+  .MySpotNotLoggedInScreen > .background > .elWind_Surfing512 {
+    left: calc(51.6% + 0px - 130px);
+    top: 248px;
+    width: 260px;
+    height: 264px;
+  }
+}
+
+
+/* Narrowest size for this element's responsive layout */
+  .MySpotNotLoggedInScreen > .layoutFlow > .flowRow > .elSunnyPeriod {
+    position: absolute;
+    margin-top: 86px;
+    width: 204px;
+    margin-left: 7px;
+  }
+  .MySpotNotLoggedInScreen > .layoutFlow > .flowRow > .elSunnyPeriod > * { 
+  width: 204px;
+  height: 204px;
+  }
+  
+  .flowRow_MySpotNotLoggedInScreen_elSunnyPeriod_685051 { 
+  }
+  
+@media (min-width: 568px) {
+  .MySpotNotLoggedInScreen > .layoutFlow > .flowRow > .elSunnyPeriod {
+    position: absolute;
+    margin-top: 86px;
+    width: 64px;
+    margin-left: 12px;
+  }
+  .MySpotNotLoggedInScreen > .layoutFlow > .flowRow > .elSunnyPeriod > * { 
+  width: 64px;
+  height: 55px;
+  }
+  
+  .flowRow_MySpotNotLoggedInScreen_elSunnyPeriod_685051 { 
+  }
+  
+}
+@media (min-width: 768px) {
+  .MySpotNotLoggedInScreen > .layoutFlow > .flowRow > .elSunnyPeriod {
+    position: absolute;
+    margin-top: 144px;
+    width: 185px;
+    margin-left: 12px;
+  }
+  .MySpotNotLoggedInScreen > .layoutFlow > .flowRow > .elSunnyPeriod > * { 
+  width: 185px;
+  height: 182px;
+  }
+  
+  .flowRow_MySpotNotLoggedInScreen_elSunnyPeriod_685051 { 
+  }
+  
+}
+@media (min-width: 1024px) {
+  .MySpotNotLoggedInScreen > .layoutFlow > .flowRow > .elSunnyPeriod {
+    position: absolute;
+    margin-top: 104px;
+    width: 198px;
+    margin-left: 22px;
+  }
+  .MySpotNotLoggedInScreen > .layoutFlow > .flowRow > .elSunnyPeriod > * { 
+  width: 198px;
+  height: 200px;
+  }
+  
+  .flowRow_MySpotNotLoggedInScreen_elSunnyPeriod_685051 { 
+  }
+  
+}
+
+
+/* Narrowest size for this element's responsive layout */
+  .MySpotNotLoggedInScreen > .layoutFlow > .flowRow > .elWindDerection {
+    overflow: hidden;
+    position: absolute;
+    top: 186px;
+    width: 49px;
+    margin-left: 82.7%;
+  }
+  .MySpotNotLoggedInScreen > .layoutFlow > .flowRow > .elWindDerection > * { 
+  width: 49px;
+  }
+  
+@media (min-width: 568px) {
+  .MySpotNotLoggedInScreen > .layoutFlow > .flowRow > .elWindDerection {
+    overflow: hidden;
+    position: absolute;
+    top: 186px;
+    width: 49px;
+    margin-left: 82.7%;
+  }
+  .MySpotNotLoggedInScreen > .layoutFlow > .flowRow > .elWindDerection > * { 
+  width: 49px;
+  }
+  
+}
+@media (min-width: 768px) {
+  .MySpotNotLoggedInScreen > .layoutFlow > .flowRow > .elWindDerection {
+    overflow: hidden;
+    position: absolute;
+    top: 98px;
+    width: 83px;
+    margin-left: calc(82.7% + 5px);
+  }
+  .MySpotNotLoggedInScreen > .layoutFlow > .flowRow > .elWindDerection > * { 
+  width: 83px;
+  }
+  
+}
+@media (min-width: 1024px) {
+  .MySpotNotLoggedInScreen > .layoutFlow > .flowRow > .elWindDerection {
+    overflow: hidden;
+    position: absolute;
+    top: 111px;
+    width: 103px;
+    margin-left: calc(82.7% + -1px);
+  }
+  .MySpotNotLoggedInScreen > .layoutFlow > .flowRow > .elWindDerection > * { 
+  width: 103px;
+  }
+  
+}
+
+
+/* Narrowest size for this element's responsive layout */
+  .MySpotNotLoggedInScreen > .layoutFlow > .flowRow > .elWindDerectionText {
+    overflow: hidden;
+    position: absolute;
+    top: 190px;
+    width: 100%;
+  }
+  .MySpotNotLoggedInScreen > .layoutFlow > .flowRow > .elWindDerectionText > * { 
+  margin-left: auto;
+  width: 153px;
+  margin-right: 18.4%;
+  }
+  
+@media (min-width: 568px) {
+  .MySpotNotLoggedInScreen > .layoutFlow > .flowRow > .elWindDerectionText {
+    overflow: hidden;
+    position: absolute;
+    top: 82px;
+    width: 100%;
+  }
+  .MySpotNotLoggedInScreen > .layoutFlow > .flowRow > .elWindDerectionText > * { 
+  margin-left: auto;
+  width: 153px;
+  margin-right: 17.9%;
+  }
+  
+}
+@media (min-width: 768px) {
+  .MySpotNotLoggedInScreen > .layoutFlow > .flowRow > .elWindDerectionText {
+    overflow: hidden;
+    position: absolute;
+    top: 100px;
+    width: 100%;
+  }
+  .MySpotNotLoggedInScreen > .layoutFlow > .flowRow > .elWindDerectionText > * { 
+  margin-left: auto;
+  width: 296px;
+  margin-right: 17.8%;
+  }
+  
+}
+@media (min-width: 1024px) {
+  .MySpotNotLoggedInScreen > .layoutFlow > .flowRow > .elWindDerectionText {
+    overflow: hidden;
+    position: absolute;
+    top: 110px;
+    width: 100%;
+  }
+  .MySpotNotLoggedInScreen > .layoutFlow > .flowRow > .elWindDerectionText > * { 
+  margin-left: auto;
+  width: 300px;
+  margin-right: 17.3%;
+  }
+  
+}
+
+
+/* Narrowest size for this element's responsive layout */
+  .MySpotNotLoggedInScreen > .layoutFlow > .flowRow > .elWindSpeed {
+    overflow: hidden;
+    position: absolute;
+    top: 150px;
+    width: 52px;
+    margin-left: 82.7%;
+  }
+  .MySpotNotLoggedInScreen > .layoutFlow > .flowRow > .elWindSpeed > * { 
+  width: 52px;
+  }
+  
+@media (min-width: 568px) {
+  .MySpotNotLoggedInScreen > .layoutFlow > .flowRow > .elWindSpeed {
+    overflow: hidden;
+    position: absolute;
+    top: 150px;
+    width: 52px;
+    margin-left: 82.7%;
+  }
+  .MySpotNotLoggedInScreen > .layoutFlow > .flowRow > .elWindSpeed > * { 
+  width: 52px;
+  }
+  
+}
+@media (min-width: 768px) {
+  .MySpotNotLoggedInScreen > .layoutFlow > .flowRow > .elWindSpeed {
+    overflow: hidden;
+    position: absolute;
+    top: 161px;
+    width: 148px;
+    margin-left: calc(82.7% + 20px);
+  }
+  .MySpotNotLoggedInScreen > .layoutFlow > .flowRow > .elWindSpeed > * { 
+  width: 148px;
+  }
+  
+}
+@media (min-width: 1024px) {
+  .MySpotNotLoggedInScreen > .layoutFlow > .flowRow > .elWindSpeed {
+    overflow: hidden;
+    position: absolute;
+    top: 174px;
+    width: 167px;
+    margin-left: calc(82.7% + 42px);
+  }
+  .MySpotNotLoggedInScreen > .layoutFlow > .flowRow > .elWindSpeed > * { 
+  width: 167px;
+  }
+  
+}
+
+
+/* Narrowest size for this element's responsive layout */
+  .MySpotNotLoggedInScreen > .layoutFlow > .flowRow > .elWindSpeedText {
+    overflow: hidden;
+    position: absolute;
+    top: 152px;
+    width: 100%;
+  }
+  .MySpotNotLoggedInScreen > .layoutFlow > .flowRow > .elWindSpeedText > * { 
+  margin-left: auto;
+  width: 158px;
+  margin-right: 18.4%;
+  }
+  
+@media (min-width: 568px) {
+  .MySpotNotLoggedInScreen > .layoutFlow > .flowRow > .elWindSpeedText {
+    overflow: hidden;
+    position: absolute;
+    top: 113px;
+    width: 100%;
+  }
+  .MySpotNotLoggedInScreen > .layoutFlow > .flowRow > .elWindSpeedText > * { 
+  margin-left: auto;
+  width: 158px;
+  margin-right: 17.9%;
+  }
+  
+}
+@media (min-width: 768px) {
+  .MySpotNotLoggedInScreen > .layoutFlow > .flowRow > .elWindSpeedText {
+    overflow: hidden;
+    position: absolute;
+    top: 162px;
+    width: 100%;
+  }
+  .MySpotNotLoggedInScreen > .layoutFlow > .flowRow > .elWindSpeedText > * { 
+  margin-left: auto;
+  width: 253px;
+  margin-right: 17.8%;
+  }
+  
+}
+@media (min-width: 1024px) {
+  .MySpotNotLoggedInScreen > .layoutFlow > .flowRow > .elWindSpeedText {
+    overflow: hidden;
+    position: absolute;
+    top: 178px;
+    width: 100%;
+  }
+  .MySpotNotLoggedInScreen > .layoutFlow > .flowRow > .elWindSpeedText > * { 
+  margin-left: auto;
+  width: 252px;
+  margin-right: 17.3%;
+  }
+  
+}
+
+
+/* Narrowest size for this element's responsive layout */
+  .MySpotNotLoggedInScreen > .layoutFlow > .flowRow > .elSpotText {
+    overflow: hidden;
+    position: absolute;
+    top: 80px;
+    width: 179px;
+    margin-left: calc(50.0% - 90px);
+  }
+  .MySpotNotLoggedInScreen > .layoutFlow > .flowRow > .elSpotText > * { 
+  width: 179px;
+  }
+  
+@media (min-width: 568px) {
+  .MySpotNotLoggedInScreen > .layoutFlow > .flowRow > .elSpotText {
+    overflow: hidden;
+    position: absolute;
+    top: 254px;
+    width: 179px;
+    margin-left: calc(50.5% - 90px);
+  }
+  .MySpotNotLoggedInScreen > .layoutFlow > .flowRow > .elSpotText > * { 
+  width: 179px;
+  }
+  
+}
+@media (min-width: 768px) {
+  .MySpotNotLoggedInScreen > .layoutFlow > .flowRow > .elSpotText {
+    overflow: hidden;
+    position: absolute;
+    top: 910px;
+    width: 211px;
+    margin-left: calc(50.4% - 105px);
+  }
+  .MySpotNotLoggedInScreen > .layoutFlow > .flowRow > .elSpotText > * { 
+  width: 211px;
+  }
+  
+}
+@media (min-width: 1024px) {
+  .MySpotNotLoggedInScreen > .layoutFlow > .flowRow > .elSpotText {
+    overflow: hidden;
+    position: absolute;
+    top: 646px;
+    width: 213px;
+    margin-left: calc(51.8% - 106px);
+  }
+  .MySpotNotLoggedInScreen > .layoutFlow > .flowRow > .elSpotText > * { 
+  width: 213px;
+  }
+  
+}
+
+
+/* Narrowest size for this element's responsive layout */
+  .MySpotNotLoggedInScreen > .layoutFlow > .flowRow > .elTempraturText {
+    overflow: hidden;
+    position: absolute;
+    top: 453px;
+    width: 100%;
+  }
+  .MySpotNotLoggedInScreen > .layoutFlow > .flowRow > .elTempraturText > * { 
+  margin-left: auto;
+  width: 163px;
+  margin-right: 51.1%;
+  }
+  
+@media (min-width: 568px) {
+  .MySpotNotLoggedInScreen > .layoutFlow > .flowRow > .elTempraturText {
+    overflow: hidden;
+    position: absolute;
+    top: 212px;
+    width: 100%;
+  }
+  .MySpotNotLoggedInScreen > .layoutFlow > .flowRow > .elTempraturText > * { 
+  margin-left: auto;
+  width: 163px;
+  margin-right: 50.6%;
+  }
+  
+}
+@media (min-width: 768px) {
+  .MySpotNotLoggedInScreen > .layoutFlow > .flowRow > .elTempraturText {
+    overflow: hidden;
+    position: absolute;
+    top: 842px;
+    width: 100%;
+  }
+  .MySpotNotLoggedInScreen > .layoutFlow > .flowRow > .elTempraturText > * { 
+  margin-left: auto;
+  width: 380px;
+  margin-right: 50.4%;
+  }
+  
+}
+@media (min-width: 1024px) {
+  .MySpotNotLoggedInScreen > .layoutFlow > .flowRow > .elTempraturText {
+    overflow: hidden;
+    position: absolute;
+    top: 568px;
+    width: 100%;
+  }
+  .MySpotNotLoggedInScreen > .layoutFlow > .flowRow > .elTempraturText > * { 
+  margin-left: auto;
+  width: 374px;
+  margin-right: 48.4%;
+  }
+  
+}
+
+
+/* Narrowest size for this element's responsive layout */
+  .MySpotNotLoggedInScreen > .layoutFlow > .flowRow > .elTemprature {
+    overflow: hidden;
+    position: absolute;
+    top: 450px;
+    width: 78px;
+    margin-left: 50.0%;
+  }
+  .MySpotNotLoggedInScreen > .layoutFlow > .flowRow > .elTemprature > * { 
+  width: 78px;
+  }
+  
+@media (min-width: 568px) {
+  .MySpotNotLoggedInScreen > .layoutFlow > .flowRow > .elTemprature {
+    overflow: hidden;
+    position: absolute;
+    top: 206px;
+    width: 78px;
+    margin-left: calc(50.0% + 236px);
+  }
+  .MySpotNotLoggedInScreen > .layoutFlow > .flowRow > .elTemprature > * { 
+  width: 78px;
+  }
+  
+}
+@media (min-width: 768px) {
+  .MySpotNotLoggedInScreen > .layoutFlow > .flowRow > .elTemprature {
+    overflow: hidden;
+    position: absolute;
+    top: 844px;
+    width: 125px;
+    margin-left: calc(50.0% + 425px);
+  }
+  .MySpotNotLoggedInScreen > .layoutFlow > .flowRow > .elTemprature > * { 
+  width: 125px;
+  }
+  
+}
+@media (min-width: 1024px) {
+  .MySpotNotLoggedInScreen > .layoutFlow > .flowRow > .elTemprature {
+    overflow: hidden;
+    position: absolute;
+    top: 565px;
+    width: 121px;
+    margin-left: calc(51.6% + 465px);
+  }
+  .MySpotNotLoggedInScreen > .layoutFlow > .flowRow > .elTemprature > * { 
+  width: 121px;
+  }
+  
+}
+
+
+/* Narrowest size for this element's responsive layout */
+  .MySpotNotLoggedInScreen > .layoutFlow > .flowRow > .elFeelsLikeText {
+    overflow: hidden;
+    position: absolute;
+    top: 487px;
+    width: 100%;
+  }
+  .MySpotNotLoggedInScreen > .layoutFlow > .flowRow > .elFeelsLikeText > * { 
+  margin-left: auto;
+  width: 139px;
+  margin-right: 51.1%;
+  }
+  
+@media (min-width: 568px) {
+  .MySpotNotLoggedInScreen > .layoutFlow > .flowRow > .elFeelsLikeText {
+    overflow: hidden;
+    position: absolute;
+    top: 212px;
+    width: 100%;
+  }
+  .MySpotNotLoggedInScreen > .layoutFlow > .flowRow > .elFeelsLikeText > * { 
+  margin-left: auto;
+  width: 139px;
+  margin-right: 50.6%;
+  }
+  
+}
+@media (min-width: 768px) {
+  .MySpotNotLoggedInScreen > .layoutFlow > .flowRow > .elFeelsLikeText {
+    overflow: hidden;
+    position: absolute;
+    top: 842px;
+    width: 100%;
+  }
+  .MySpotNotLoggedInScreen > .layoutFlow > .flowRow > .elFeelsLikeText > * { 
+  margin-left: auto;
+  width: 380px;
+  margin-right: 50.4%;
+  }
+  
+}
+@media (min-width: 1024px) {
+  .MySpotNotLoggedInScreen > .layoutFlow > .flowRow > .elFeelsLikeText {
+    overflow: hidden;
+    position: absolute;
+    top: 568px;
+    width: 100%;
+  }
+  .MySpotNotLoggedInScreen > .layoutFlow > .flowRow > .elFeelsLikeText > * { 
+  margin-left: auto;
+  width: 374px;
+  margin-right: 48.4%;
+  }
+  
+}
+
+
+/* Narrowest size for this element's responsive layout */
+  .MySpotNotLoggedInScreen > .layoutFlow > .flowRow > .elFellsLikeTemp {
+    overflow: hidden;
+    position: absolute;
+    top: 484px;
+    width: 78px;
+    margin-left: 50.0%;
+  }
+  .MySpotNotLoggedInScreen > .layoutFlow > .flowRow > .elFellsLikeTemp > * { 
+  width: 78px;
+  }
+  
+@media (min-width: 568px) {
+  .MySpotNotLoggedInScreen > .layoutFlow > .flowRow > .elFellsLikeTemp {
+    overflow: hidden;
+    position: absolute;
+    top: 206px;
+    width: 78px;
+    margin-left: calc(50.0% + 236px);
+  }
+  .MySpotNotLoggedInScreen > .layoutFlow > .flowRow > .elFellsLikeTemp > * { 
+  width: 78px;
+  }
+  
+}
+@media (min-width: 768px) {
+  .MySpotNotLoggedInScreen > .layoutFlow > .flowRow > .elFellsLikeTemp {
+    overflow: hidden;
+    position: absolute;
+    top: 844px;
+    width: 125px;
+    margin-left: calc(50.0% + 425px);
+  }
+  .MySpotNotLoggedInScreen > .layoutFlow > .flowRow > .elFellsLikeTemp > * { 
+  width: 125px;
+  }
+  
+}
+@media (min-width: 1024px) {
+  .MySpotNotLoggedInScreen > .layoutFlow > .flowRow > .elFellsLikeTemp {
+    overflow: hidden;
+    position: absolute;
+    top: 565px;
+    width: 121px;
+    margin-left: calc(51.6% + 465px);
+  }
+  .MySpotNotLoggedInScreen > .layoutFlow > .flowRow > .elFellsLikeTemp > * { 
+  width: 121px;
+  }
+  
+}
+
+
+/* Narrowest size for this element's responsive layout */
+  .MySpotNotLoggedInScreen > .screenFgContainer > .foreground > .elWave {
+    position: absolute;
+    left: calc(6.0% + 0px);
+    top: 0px;
+    width: 52px;
+    height: 52px;
+  }
+@media (min-width: 568px) {
+  .MySpotNotLoggedInScreen > .screenFgContainer > .foreground > .elWave {
+    left: calc(6.0% + 0px);
+    top: 0px;
+    width: 52px;
+    height: 52px;
+  }
+}
+@media (min-width: 768px) {
+  .MySpotNotLoggedInScreen > .screenFgContainer > .foreground > .elWave {
+    left: calc(6.0% + 0px);
+    top: 0px;
+    width: 52px;
+    height: 52px;
+  }
+}
+@media (min-width: 1024px) {
+  .MySpotNotLoggedInScreen > .screenFgContainer > .foreground > .elWave {
+    left: calc(6.0% + 0px);
+    top: 0px;
+    width: 52px;
+    height: 52px;
+  }
+}
+
+.MySpotNotLoggedInScreen .elComp {
+  overflow: hidden;
+}
+
+.MySpotNotLoggedInScreen .elComp.hasNestedComps > div {
+  overflow: hidden;
+  position: relative;
+}
+
+
+
+/* Narrowest size for this element's responsive layout */
+  .MySpotNotLoggedInScreen > .screenFgContainer > .foreground > .elComp {
+    position: absolute;
+    left: calc(82.7% + 0px - 26px);
+    top: 7px;
+    width: 52px;
+    height: 52px;
+  }
+  .MySpotNotLoggedInScreen > .screenFgContainer > .foreground > .elComp > .background > .containerMinHeight {
+    min-height: 53px;
+  }
+
+@media (min-width: 568px) {
+  .MySpotNotLoggedInScreen > .screenFgContainer > .foreground > .elComp {
+    left: calc(82.7% + 0px - 26px);
+    top: 7px;
+    width: 52px;
+    height: 52px;
+  }
+  .MySpotNotLoggedInScreen > .screenFgContainer > .foreground > .elComp > .background > .containerMinHeight {
+    min-height: 53px;
+  }
+
+}
+@media (min-width: 768px) {
+  .MySpotNotLoggedInScreen > .screenFgContainer > .foreground > .elComp {
+    left: calc(82.7% + 0px - 26px);
+    top: 7px;
+    width: 52px;
+    height: 52px;
+  }
+  .MySpotNotLoggedInScreen > .screenFgContainer > .foreground > .elComp > .background > .containerMinHeight {
+    min-height: 52px;
+  }
+
+}
+@media (min-width: 1024px) {
+  .MySpotNotLoggedInScreen > .screenFgContainer > .foreground > .elComp {
+    left: calc(82.7% + 0px - 26px);
+    top: 7px;
+    width: 52px;
+    height: 52px;
+  }
+  .MySpotNotLoggedInScreen > .screenFgContainer > .foreground > .elComp > .background > .containerMinHeight {
+    min-height: 52px;
+  }
+
+}
+
